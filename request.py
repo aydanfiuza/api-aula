@@ -14,4 +14,4 @@ if response.status_code == 200:
     translated_word = data['translated_word']
     print(f'A palavra traduzida é: {translated_word}')
 else:
-    print('Erro ao fazer a solicitação.')
+    print(f'Erro ao fazer a solicitação. Código: ${response.status_code}')
