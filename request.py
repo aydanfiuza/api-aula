@@ -1,6 +1,6 @@
 import requests
 
-url = "https://translate-app-aydan-3be2db5d0f7b.herokuapp.com"
+url = "https://translate-app-aydan-3be2db5d0f7b.herokuapp.com/translate"
 
 word_input = input("Informe uma palavra que você gostaria de traduzir: ")
 option_input = input("Escolha uma opção de idioma (en para inglês ou fr para francês): ")
@@ -14,4 +14,4 @@ if response.status_code == 200:
     translated_word = data['translated_word']
     print(f'A palavra traduzida é: {translated_word}')
 else:
-    print(f'Erro ao fazer a solicitação. Código: ${response.status_code}')
+    print(f'Erro ao fazer a solicitação. Código: {response.status_code}')
