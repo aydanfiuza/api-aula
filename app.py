@@ -14,7 +14,7 @@ words_french = {
     'azul' : 'bleu'
 }
 
-@app.route('translate', methods=['POST'])
+@app.route('/translate', methods=['POST'])
 def translate():
     data = request.get_json()
     word = data['word']

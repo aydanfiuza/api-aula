@@ -1,6 +1,6 @@
 import requests
 
-url = "https://translate-app-aydan-3be2db5d0f7b.herokuapp.com/"
+url = "https://translate-app-aydan-3be2db5d0f7b.herokuapp.com"
 
 word_input = input("Informe uma palavra que você gostaria de traduzir: ")
 option_input = input("Escolha uma opção de idioma (en para inglês ou fr para francês): ")
