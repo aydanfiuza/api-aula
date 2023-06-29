@@ -21,12 +21,11 @@ def translate():
     option = data['option']
     option_str = str(option)
 
-    if option_str.lower() == 'en':
-        translated_word = words_english.get(word)
-    elif option_str.lower() == 'fr':
+    if option_str.lower() == 'fr':
         translated_word = words_french.get(word)
     else:
-        return jsonify(error = 'Idioma não encontrado.')
+        translated_word = words_english.get(word)
+
 
     if translated_word:
         return jsonify(translated_word = translated_word)
