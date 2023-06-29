@@ -22,8 +22,10 @@ def translate():
 
     if option == 'en':
         translated_word = words_english.get(word)
-    else:
+    elif option == 'fr':
         translated_word = words_french.get(word)
+    else:
+        return jsonify(error = 'Idioma não encontrado.')
 
     if translated_word:
         return jsonify(translated_word = translated_word)
