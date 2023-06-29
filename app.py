@@ -19,10 +19,11 @@ def translate():
     data = request.get_json()
     word = data['word']
     option = data['option']
+    option_str = str(option)
 
-    if option == 'en':
+    if option_str.lower() == 'en':
         translated_word = words_english.get(word)
-    elif option == 'fr':
+    elif option_str.lower() == 'fr':
         translated_word = words_french.get(word)
     else:
         return jsonify(error = 'Idioma não encontrado.')
